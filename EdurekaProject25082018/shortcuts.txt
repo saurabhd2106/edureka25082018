@@ -1,0 +1,13 @@
+
+	syso + ctrl + spacebar + enter --> creates System.out.println(); method
+	
+	saving file -- ctrl+ s
+	saving all files -- Shift + ctrl + s
+	
+	main + ctrl + spacebar + enter --> create main method
+	
+	Alt + Shift +X, J -->Run as Java program
+	
+	Shift + ctrl + F -- to format the code
+	
+	
