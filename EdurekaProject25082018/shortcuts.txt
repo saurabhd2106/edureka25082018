@@ -10,4 +10,6 @@
 	
 	Shift + ctrl + F -- to format the code
 	
+	Shift + ctrl + B -- toggling a break point
+	
 	
