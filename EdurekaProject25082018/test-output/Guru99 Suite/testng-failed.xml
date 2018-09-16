@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Guru99 Suite]">
+  <test name="Test(failed)">
+    <parameter name="password" value="adanyru"/>
+    <parameter name="userid" value="mngr153359"/>
+    <classes>
+      <class name="day8.Guru99Project">
+        <methods>
+          <include name="invokeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="verifyTitleOfThePage"/>
+        </methods>
+      </class> <!-- day8.Guru99Project -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Guru99 Suite] -->

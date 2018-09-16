@@ -23,6 +23,8 @@ public class WorkingWithChrome {
 		
 		driver.get("http://qatechhub.com");
 		
+		//Thread.sleep(1000);
+		
 	}
 	
 	String getPageTitle(){

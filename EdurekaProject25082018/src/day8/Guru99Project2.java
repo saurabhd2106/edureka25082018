@@ -1,16 +1,24 @@
-package day6;
+package day8;
 
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
-public class MultipleBrowser {
+public class Guru99Project2 {
 
 	WebDriver driver;
 
-	void invokeBrowser(String browserType) throws Exception{
+	@Parameters("browserType")
+	@BeforeClass
+	public void invokeBrowser(String browserType) throws Exception {
 
 		if (browserType.equals("firefox")) {
 
@@ -38,46 +46,32 @@ public class MultipleBrowser {
 		throw new Exception("Invalid Browser type");
 		
 		}
-		Dimension dim = new Dimension(600, 600);
-		driver.manage().window().setSize(dim);
-
 		driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();
 
-		driver.get("http://qatechhub.com");
-
+		driver.get("http://demo.guru99.com/v4");
 	}
 
-	String getPageTitle() {
-		return driver.getTitle();
+	@Test(priority = 0)
+	public void verifyTitleOfThePage() {
+		Assert.assertEquals(driver.getTitle(), "Guru99 Bank Home Page");
 	}
 
-	void navigateCommands() {
-		driver.navigate().to("http://www.facebook.com");
+	@Parameters({"userid","password"})
+	@Test(priority = 100)
+	public void verifyLoginToGuru99WithCorrectCredentials(String userEmailId, String userPassword) {
+		WebElement userId = driver.findElement(By.name("uid"));
 
-		driver.navigate().back();
+		userId.sendKeys(userEmailId);
 
-		driver.navigate().forward();
+		driver.findElement(By.name("password")).sendKeys(userPassword);
 
-		driver.navigate().refresh();
-
+		driver.findElement(By.name("btnLogin")).click();
 	}
 
-	public void searchState() {
-
-		String tripType = "oneWay";
-		String destination = "to";
-		String city = "Delhi";
-
-		String cityXpath = String.format(
-				"//div[@id='%s']/form//div[@class='city-dropdown-list city-name-%s']//a[contains(text(),'%s')]",
-				tripType, destination, city);
-	}
-
-	void closeBrowser() {
-		// driver.close();
-
+	@AfterClass
+	public void closeBrowser() {
 		driver.quit();
 	}
 

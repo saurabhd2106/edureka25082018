@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Parallel Execution Suite]">
+  <test name="Firefox Execution(failed)">
+    <parameter name="browserType" value="firefox"/>
+    <classes>
+      <class name="day8.Guru99Project2">
+        <methods>
+          <include name="verifyLoginToGuru99WithCorrectCredentials"/>
+          <include name="invokeBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- day8.Guru99Project2 -->
+    </classes>
+  </test> <!-- Firefox Execution(failed) -->
+  <test name="Chrome Execution(failed)">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="day8.Guru99Project2">
+        <methods>
+          <include name="verifyLoginToGuru99WithCorrectCredentials"/>
+          <include name="invokeBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- day8.Guru99Project2 -->
+    </classes>
+  </test> <!-- Chrome Execution(failed) -->
+  <test name="Edge Execution(failed)">
+    <parameter name="browserType" value="edge"/>
+    <classes>
+      <class name="day8.Guru99Project2">
+        <methods>
+          <include name="verifyLoginToGuru99WithCorrectCredentials"/>
+          <include name="invokeBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- day8.Guru99Project2 -->
+    </classes>
+  </test> <!-- Edge Execution(failed) -->
+</suite> <!-- Failed suite [Parallel Execution Suite] -->
