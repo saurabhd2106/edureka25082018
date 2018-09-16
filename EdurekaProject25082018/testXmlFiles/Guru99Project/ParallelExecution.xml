@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Execution Suite" parallel="tests">
+	<test name="Firefox Execution">
+		<parameter name="browserType" value="firefox"></parameter>
+		<parameter name="userid" value="mngr153359"></parameter>
+		<parameter name="password" value="adanyru"></parameter>
+		<classes>
+			<class name="day8.Guru99Project2" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Chrome Execution">
+		<parameter name="browserType" value="chrome"></parameter>
+		<parameter name="userid" value="mngr153359"></parameter>
+		<parameter name="password" value="adanyru"></parameter>
+		<classes>
+			<class name="day8.Guru99Project2" />
+		</classes>
+	</test>
+	<test name="Edge Execution">
+		<parameter name="browserType" value="edge"></parameter>
+		<parameter name="userid" value="mngr153359"></parameter>
+		<parameter name="password" value="adanyru"></parameter>
+		<classes>
+			<class name="day8.Guru99Project2" />
+		</classes>
+	</test>
+</suite> <!-- Parallel Execution Suite -->

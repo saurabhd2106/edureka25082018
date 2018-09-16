@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Class Execution suite">
+  <test name="Feature 1 test">
+    <classes>
+      <class name="day8.TestNGTest"/>
+      <class name="day8.TestNGTest2"/>
+    </classes>
+  </test> 
+</suite>
